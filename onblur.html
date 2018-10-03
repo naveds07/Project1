@@ -1,0 +1,153 @@
+<html>
+<head>
+<title>
+RESUME
+</title>
+<style>
+.bod{display:inline-block;
+	width:100%;
+	height:100%;
+	background-color:;
+	border:0px solid black;
+	vertical-align:top;
+	*display:inline;
+	}
+.heading{
+	margin-left:500px;
+	width:500px;
+	height:80px;
+	background-color:#A99797;
+	border:1px solid black;
+	}
+.container{
+	display:inline-block;
+	background:;
+	width:1430px;
+	height:720px;
+	background-color:#BDCECE;
+	margin-top:5px;
+	vertical-align:top;
+	*display:inline;
+	margin-left:35px;
+	border:1px solid black;
+	}
+.box{
+	margin-left:50px;
+	margin-top:50px;
+	display:inline-block;
+	width:750px;
+	height:600px;
+	background-color:white;
+	vertical-align:top;
+	*display:inline;
+	border:1px solid black;
+	}
+.box1{
+	margin-left:0px;
+	margin-top:50px;
+	display:inline-block;
+	width:350px;
+	height:170px;
+	background-color:white;
+	vertical-align:top;
+	*display:inline;
+	border:1px solid black;
+	}
+
+</style>
+</head>
+<body>
+<script>
+function func(){
+
+var count=0;
+var c;
+c=document.getElementById("tb").value;
+if(c =='')
+{
+document.getElementById("rrr").innerHTML="Enter Name in characters";
+document.getElementById("rrr").style.color="red";
+return false;}
+else {
+document.getElementById("rrr").innerHTML="";
+}
+var d;
+d=document.getElementById("tb1").value;
+if(d =='' )
+{
+document.getElementById("rrr2").innerHTML="Enter City";
+document.getElementById("rrr2").style.color="red";
+return false;}
+else {
+document.getElementById("rrr2").innerHTML="";
+}
+var e;
+e=document.getElementById("tb2").value;
+if(e =='' )
+{
+document.getElementById("rrr3").innerHTML="Enter Phone";
+document.getElementById("rrr3").style.color="red";
+return false;}
+else {
+document.getElementById("rrr3").innerHTML="";
+}
+var f;
+f=document.getElementById("tb3").value;
+if(f =='' )
+{
+document.getElementById("rrr4").innerHTML="Enter DOB";
+document.getElementById("rrr4").style.color="red";
+return false;}
+else {
+document.getElementById("rrr4").innerHTML="";
+}
+if(count>0){
+return false;}
+else 
+{return true;}
+}
+</script>
+<div class="bod">
+<div class="heading">
+<h1><p style="margin-left:110px">Registration Form</p></h1>
+</div>
+<div class="container">
+<div class="box">
+<form onsubmit="return func()">
+<ol>
+Full Name*<br/><input type="text" placeholder="" id="tb" size=9 onblur="func()"> 
+<span id="rrr"></span><br/>
+
+Address*<br/><textarea></textarea><br/>
+City*<br/><input type="text" id="tb1" onblur="func()"><span id="rrr2"></span><br/><br/><br>
+State*<br/><select>
+<option value="MP">MP</option>
+<option value="UP">UP</option>
+<option value="WB">WB</option>
+</select></ol>
+
+<ol>
+Email*<br/><textarea></textarea><br/><br/>
+Phone*<br/><input type="number" size=1 id="tb2" onblur="func()"><span id="rrr3"></span>
+</ol>
+<ol>DOB*<br/><input type="date" id="tb3" onblur="func()"><span id="rrr4"></span><br/><br/>
+Gender*<br/>
+<input type="radio" name="AA" onblur="func()">MALE<input type="radio" name="AA" onblur="func()">FEMALE<br/><br/>
+<input type="file"><br/><br/>
+Confirm Password*<input type="password" id="tb4" onblur="func()"></br>
+Skills:PHP<input type="checkbox" onblur="func()">
+<input type="Submit"></ol>
+
+</form>
+</p>
+</div>
+<div class="box1"><ol>
+<span id="res"></span><br/>
+<span id="res1"></span><br/>
+<span id="res2"></span><br/>
+<span id="res3"></span>
+<span id="res4"></span></ol>
+</div>
+</div>
+</body>
+</html>

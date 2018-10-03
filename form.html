@@ -1,0 +1,216 @@
+<html>
+<head>
+<title>
+RESUME
+</title>
+<style>
+.bod{
+	width:100%;
+	height:100%;
+	background-color:;
+	border:0px solid black;
+	}
+.heading{
+	margin-left:500px;
+	width:500px;
+	height:80px;
+	background-color:#A99797;
+	border:1px solid black;
+	}
+.container{
+	background:;
+	width:1430px;
+	height:700px;
+	background-color:#BDCECE;
+	margin-top:5px;
+	margin-left:35px;
+	border:1px solid black;
+	}
+.box{
+	margin-left:150px;
+	margin-top:50px;
+	display:inline-block;
+	width:750px;
+	height:600px;
+	background-color:white;
+	vertical-align:top;
+	*display:inline;
+	border:1px solid black;
+	}
+.box1{
+	margin-left:250px;
+	margin-top:50px;
+	display:inline-block;
+	width:350px;
+	height:250px;
+	background-color:white;
+	vertical-align:top;
+	*display:inline;
+	border:1px solid black;
+	}
+.box2{
+	display:inline-block;
+	width:350px;
+	height:200px;
+	background-color:white;
+	vertical-align:top;
+	*display:inline;
+	margin-left:150px;
+	margin-top:60px;
+	border:1px solid black;
+	}
+.box3{
+	margin-left:250px;
+	margin-top:50px;
+	display:inline-block;
+	width:350px;
+	height:200px;
+	background-color:white;
+	vertical-align:top;
+	*display:inline;
+	border:1px solid black;
+	}
+</style>
+</head>
+<body>
+<script>
+function sub(){
+var c;var count=0;
+c=document.getElementById("txtname").value;
+if((!(isNaN(c))) || (c==''))
+{document.getElementById("eername").innerHTML="Enter Name";
+document.getElementById("eername").style.color="red";
+count++;
+}
+else{
+document.getElementById("eername").style.display="none";}
+
+var d;
+d=document.getElementById("tb1").value;
+if(d =='')
+{document.getElementById("res1").innerHTML="Enter City";
+document.getElementById("res1").style.color="red";
+count++;
+}
+else{
+document.getElementById("res1").style.display="none";}
+var e;
+e=document.getElementById("tb2").value;
+if(e =='')
+{document.getElementById("res2").innerHTML="Enter Number";
+document.getElementById("res2").style.color="red";
+count++;
+}
+else{
+document.getElementById("res2").style.display="none";}
+var f;
+f=document.getElementById("tb3").value;
+if(f =='')
+{document.getElementById("res3").innerHTML="Enter DOB";
+document.getElementById("res3").style.color="red";
+count++;
+}
+else{
+document.getElementById("res3").innerHTML="";
+}
+var password=document.getElementById("pass").value;
+
+if(password =='')
+{document.getElementById("eerpass").innerHTML="Confirm Password";
+document.getElementById("eerpass").style.color="red";
+count++;
+}
+else{
+document.getElementById("eerpass").innerHTML="";}
+
+var fil=document.getElementById("tb6").value;
+
+if(fil =='')
+{document.getElementById("res6").innerHTML="Please enter file";
+document.getElementById("res6").style.color="red";
+count++;
+}
+else{
+document.getElementById("res6").innerHTML="";}
+
+
+var skill=document.getElementsByName("skills[]");
+	var flag=0;
+	for(var i=0;i<skill.length;i++)
+	{
+		if(skill[i].checked)
+	    {
+	    	flag++;
+	    }
+	}
+	    if(flag<=1){
+	    	document.getElementById('errorskills').style.color="red";
+	    	document.getElementById('errorskills').innerHTML="Please select your skills";
+	    	count++;
+
+	    }
+	    else{
+            document.getElementById('errorskills').innerHTML="";
+	    }
+		
+var gend=document.getElementsByName("gen[]");
+	var flag1=0;
+	for(var i=0;i<gend.length;i++)
+	{
+		if(gend[i].checked)
+	    {
+	    	flag1++;
+	    }
+	}
+	    if(flag1==0){
+	    	document.getElementById('res8').style.color="red";
+	    	document.getElementById('res8').innerHTML="Please select a gender";
+	    	count++;
+
+	    }
+	    else{
+            document.getElementById('res8').innerHTML="";
+	    }
+if(count>0){
+return false;}
+else{
+return true;
+}
+}
+</script>
+<div class="bod">
+<div class="heading">
+<h1><p style="margin-left:110px">Registration Form</p></h1>
+</div>
+<div class="container">
+<div class="box">
+<form onsubmit="return sub()">
+<ol>
+Password*<input type="password" id="pass"><span id="eerpass"></span></br></br>
+Full Name*<br/><input type="text" placeholder="" id="txtname" size=9> <input type="text" id="txtname1" placeholder="" size=9><span id="eername"></span><br/>
+Address*<br/><textarea></textarea><br/>
+City*<br/><input type="text" id="tb1"><span id="res1"></span><br/><br>
+State*<br/><select>
+<option value="MP">MP</option>
+<option value="UP">UP</option>
+<option value="WB">WB</option>
+</select></ol>
+<ol>
+Email*<br/><textarea></textarea><br/><br/>
+Phone*<br/><input type="number" size=1 id="tb2"><input type="number" size=6><span id="res2"></span><br/><br/>
+DOB*<input type="date" id="tb3"><span id="res3"></span><br/><br/>
+Gender*<br/>
+<input type="radio" name="gen[]">MALE<input type="radio" name="gen[]">FEMALE<span id="res8"></span><br/><br/>
+<input type="file" id="tb6"><span id="res6"></span><br/><br/>
+Skills:<input type="checkbox" name="skills[]">SQL
+<input type="checkbox" name="skills[]">Java
+<input type="checkbox" name="skills[]">PHP
+<input type="checkbox" name="skills[]">Oracle
+<span id="errorskills"></span><br/><br/>
+<input type="Submit"></ol>
+</form>
+</div>
+</p></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<html>
+<head>
+<title>
+Abc
+</title>
+<style>
+.star{
+	position:relative;
+	display:inline-block;
+	width:0;height:0;
+	margin-left:0.9em;
+	margin-right:0.9em;
+	margin-bottom:1.2em;
+	border-right:0.3em solid transparent;
+	border-bottom:0.7em solid #FC0;
+	border-left:0.3em solid transparent;
+	font-size:24px;
+	&:before, &:after{
+	content:'';
+	display:block;
+	width:0;height:0;position:absolute;top:0.6em;left:-1em;
+	border-right:1em solid transparent;
+	border-bottom:0.7em solid #FC0;
+	border-left:1em solid transparent;
+	transform: rotate(-35deg);
+	&:after{
+	transform: rotate(35deg);
+	}
+</style>
+</head>
+<body>
+<!h3 title="Hello World"!>Hiee</h3>
+
+<!img src="naved.jpg" alt="abc" style="width:200px" border="3" align="center";!>
+NAME:<input type="text" placeholder="" size="16"><br/><br/>
+PASSWORD:<input type="password" placeholder="" size="16"><br/><br/>
+DOB:<input type="date"><br/><br/>
+ADRESS:<textarea></textarea><br/></br>
+<input type="button" value="Register"><br/><br/>
+<!input type="submit"!><br/>GENDER:<br/><br/>
+<input type="radio" name="A">MALE<input type="radio" name="AA">FEMALE<br/><br/>
+<select>
+STATE:<br/>
+<option value="STATE"/>UP</option>
+<option value="STATE"/>WB</option>
+</select>
+<select>
+CITY:<br/>
+<option value="CITY"/>KOLKATA</option>
+<option value="CITY"/>MUMBAI</option>
+</select>
+
+<option value="MP">MP</option>
+<option value="UP">UP</option>
+<option value="WB">WB</option>
+<br/>
+<h1>Stars are:</h1>
+<p>
+<i class="star"></i>
+<i class="star"></i>
+<i class="star"></i>
+</body>
+</html>

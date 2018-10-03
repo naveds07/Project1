@@ -1,0 +1,157 @@
+<html>
+<head>
+<title>
+RESUME
+</title>
+<style>
+.bod{display:inline-block;
+	width:100%;
+	height:100%;
+	background-color:;
+	border:0px solid black;
+	vertical-align:top;
+	*display:inline;
+	}
+.heading{
+	margin-left:500px;
+	width:500px;
+	height:80px;
+	background-color:#A99797;
+	border:1px solid black;
+	}
+.container{
+	display:inline-block;
+	background:;
+	width:1430px;
+	height:720px;
+	background-color:#BDCECE;
+	margin-top:5px;
+	vertical-align:top;
+	*display:inline;
+	margin-left:35px;
+	border:1px solid black;
+	}
+.box{
+	margin-left:50px;
+	margin-top:50px;
+	display:inline-block;
+	width:750px;
+	height:600px;
+	background-color:white;
+	vertical-align:top;
+	*display:inline;
+	border:1px solid black;
+	}
+.box1{
+	margin-left:0px;
+	margin-top:50px;
+	display:inline-block;
+	width:350px;
+	height:170px;
+	background-color:white;
+	vertical-align:top;
+	*display:inline;
+	border:1px solid black;
+	}
+
+</style>
+</head>
+<body>
+<script>
+function sub(){
+var count=0;
+var c;
+c=document.getElementById("tb").value;
+if(c ==' ' || ((isNan(a))))
+{
+document.getElementById("res").innerHTML="Enter Name in characters";
+document.getElementById("res").style.color="red";
+return false;}
+else {
+document.getElementById("res").innerHTML="";
+}
+var d;
+d=document.getElementById("tb1").value;
+if(d =='')
+{document.getElementById("res1").innerHTML="Enter City";
+document.getElementById("res1").style.color="red";
+return false;}
+else {
+document.getElementById("res1").innerHTML="";
+}
+var e;
+e=document.getElementById("tb2").value;
+if(e =='')
+{document.getElementById("res2").innerHTML="Enter Number";
+document.getElementById("res2").style.color="red";
+return false;}
+else {
+document.getElementById("res2").innerHTML="";
+}
+var f;
+f=document.getElementById("tb3").value;
+if(f =='')
+{document.getElementById("res3").innerHTML="Enter DOB";
+document.getElementById("res3").style.color="red";
+count++;}
+else {
+document.getElementById("res3").innerHTML="";
+}
+var g;
+g=document.getElementById("tb4").value;
+if(g =='')
+{document.getElementById("res4").innerHTML="Enter Password";
+document.getElementById("res4").style.color="red";
+count++;}
+else {
+document.getElementById("res4").innerHTML="";
+}
+if(count>0)
+return false;
+else 
+return true;
+}
+</script>
+<div class="bod">
+<div class="heading">
+<h1><p style="margin-left:110px">Registration Form</p></h1>
+</div>
+<div class="container">
+<div class="box">
+<form onsubmit="return sub()">
+<ol>
+Full Name*<br/><input type="text" placeholder="" id="tb" size=9 onblur=sub()> <input type="text" id="tb" placeholder="" size=9 onblur=sub()><span id="rrr"></span><br/>
+
+Address*<br/><textarea></textarea><br/>
+City*<br/><input type="text" id="tb1" onblur=sub()><br/><br>
+State*<br/><select>
+<option value="MP">MP</option>
+<option value="UP">UP</option>
+<option value="WB">WB</option>
+</select></ol>
+
+<ol>
+Email*<br/><textarea></textarea><br/><br/>
+Phone*<br/><input type="number" size=1 id="tb2" onblur=sub()><input type="number" size=6 onblur=sub()>
+</ol>
+<ol>DOB*<br/><input type="date" id="tb3"><br/><br/>
+Gender*<br/>
+<input type="radio" name="AA" onblur=sub()>MALE<input type="radio" name="AA" onblur=sub()>FEMALE<br/><br/>
+<input type="file"><br/><br/>
+Confirm Password*<input type="password" id="tb4" onblur=sub()></br>
+Skills:PHP<input type="checkbox" onblur=sub()>
+<input type="Submit"></ol>
+
+</form>
+</p>
+</div>
+<div class="box1"><ol>
+<span id="res"></span><br/>
+<span id="res1"></span><br/>
+<span id="res2"></span><br/>
+<span id="res3"></span>
+<span id="res4"></span></ol>
+</div>
+</div>
+</body>
+</html>
